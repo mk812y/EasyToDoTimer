@@ -15,6 +15,7 @@
 		A59D3D58287AEA7200B1C6B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59D3D57287AEA7200B1C6B8 /* Preview Assets.xcassets */; };
 		A59D3D5F287B0F1300B1C6B8 /* trash.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D3D5E287B0F1300B1C6B8 /* trash.swift */; };
 		A59D3D61287B708000B1C6B8 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D3D60287B708000B1C6B8 /* CircleButton.swift */; };
+		A5E8AD90287CB17C000034D8 /* testData.json in Resources */ = {isa = PBXBuildFile; fileRef = A5E8AD8F287CB17C000034D8 /* testData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A59D3D57287AEA7200B1C6B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A59D3D5E287B0F1300B1C6B8 /* trash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trash.swift; sourceTree = "<group>"; };
 		A59D3D60287B708000B1C6B8 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		A5E8AD8F287CB17C000034D8 /* testData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				A59D3D60287B708000B1C6B8 /* CircleButton.swift */,
 				A5703314287C936E00267155 /* ModelTimer.swift */,
 				A59D3D5E287B0F1300B1C6B8 /* trash.swift */,
+				A5E8AD8F287CB17C000034D8 /* testData.json */,
 				A59D3D54287AEA7200B1C6B8 /* Assets.xcassets */,
 				A59D3D56287AEA7200B1C6B8 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5E8AD90287CB17C000034D8 /* testData.json in Resources */,
 				A59D3D58287AEA7200B1C6B8 /* Preview Assets.xcassets in Resources */,
 				A59D3D55287AEA7200B1C6B8 /* Assets.xcassets in Resources */,
 			);

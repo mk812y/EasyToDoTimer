@@ -1,0 +1,83 @@
+[
+  {
+    "id": 100001,
+    "name": "commit everyday on GitHub",
+    "weekday": {
+      "goalHours": {
+        "monday": 12,
+        "tuesday": 4,
+        "wednesday": 10,
+        "thersday": 5,
+        "friday": 3,
+        "saturday": 15,
+        "sunday": 9
+      },
+      "totalHours": {
+        "monday": 12,
+        "tuesday": 5,
+        "wednesday": 9,
+        "thersday": 4,
+        "friday": 2,
+        "saturday": 25,
+        "sunday": 9
+      }
+    },
+    "isComplete": false,
+    "isRunning": false,
+    "description": "Wow!"
+  },
+  {
+    "id": 100002,
+    "name": "Весёлая ручка",
+    "weekday": {
+      "goalHours": {
+        "monday": 13,
+        "tuesday": 12,
+        "wednesday": 1,
+        "thersday": 0,
+        "friday": 0,
+        "saturday": 10,
+        "sunday": 8
+      },
+      "totalHours": {
+        "monday": 12,
+        "tuesday": 2,
+        "wednesday": 9,
+        "thersday": 4,
+        "friday": 0,
+        "saturday": 43,
+        "sunday": 8
+      }
+    },
+    "isComplete": true,
+    "isRunning": false,
+    "description": "Многие думают"
+  },
+  {
+    "id": 100003,
+    "name": "Трамвайная ручка",
+    "weekday": {
+      "goalHours": {
+        "monday": 14,
+        "tuesday": 14,
+        "wednesday": 14,
+        "thersday": 14,
+        "friday": 0,
+        "saturday": 0,
+        "sunday": 0
+      },
+      "totalHours": {
+        "monday": 11,
+        "tuesday": 3,
+        "wednesday": 19,
+        "thersday": 6,
+        "friday": 0,
+        "saturday": 3,
+        "sunday": 5
+      }
+    },
+    "isComplete": false,
+    "isRunning": true,
+    "description": "Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад."
+  }
+]
