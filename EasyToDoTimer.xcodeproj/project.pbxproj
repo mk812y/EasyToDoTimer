@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A56A46C9287D7ABD00421DA4 /* ItemTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A46C8287D7ABD00421DA4 /* ItemTimer.swift */; };
+		A56A46CB287D9A4E00421DA4 /* TimerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A46CA287D9A4E00421DA4 /* TimerRow.swift */; };
 		A5703313287C3FAC00267155 /* RightButtonStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5703312287C3FAC00267155 /* RightButtonStack.swift */; };
 		A5703315287C936E00267155 /* ModelTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5703314287C936E00267155 /* ModelTimer.swift */; };
 		A59D3D51287AEA7100B1C6B8 /* EasyToDoTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D3D50287AEA7100B1C6B8 /* EasyToDoTimerApp.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A56A46C8287D7ABD00421DA4 /* ItemTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTimer.swift; sourceTree = "<group>"; };
+		A56A46CA287D9A4E00421DA4 /* TimerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRow.swift; sourceTree = "<group>"; };
 		A5703312287C3FAC00267155 /* RightButtonStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightButtonStack.swift; sourceTree = "<group>"; };
 		A5703314287C936E00267155 /* ModelTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTimer.swift; sourceTree = "<group>"; };
 		A59D3D4D287AEA7100B1C6B8 /* EasyToDoTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyToDoTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,12 +66,14 @@
 			isa = PBXGroup;
 			children = (
 				A59D3D50287AEA7100B1C6B8 /* EasyToDoTimerApp.swift */,
-				A5E8AD94287CB3DD000034D8 /* Resources */,
 				A59D3D52287AEA7100B1C6B8 /* ContentView.swift */,
+				A56A46CA287D9A4E00421DA4 /* TimerRow.swift */,
 				A5703312287C3FAC00267155 /* RightButtonStack.swift */,
 				A59D3D60287B708000B1C6B8 /* CircleButton.swift */,
 				A5703314287C936E00267155 /* ModelTimer.swift */,
+				A56A46C8287D7ABD00421DA4 /* ItemTimer.swift */,
 				A59D3D5E287B0F1300B1C6B8 /* trash.swift */,
+				A5E8AD94287CB3DD000034D8 /* Resources */,
 				A59D3D54287AEA7200B1C6B8 /* Assets.xcassets */,
 				A59D3D56287AEA7200B1C6B8 /* Preview Content */,
 			);
@@ -163,7 +169,9 @@
 			files = (
 				A59D3D5F287B0F1300B1C6B8 /* trash.swift in Sources */,
 				A5703315287C936E00267155 /* ModelTimer.swift in Sources */,
+				A56A46CB287D9A4E00421DA4 /* TimerRow.swift in Sources */,
 				A59D3D53287AEA7100B1C6B8 /* ContentView.swift in Sources */,
+				A56A46C9287D7ABD00421DA4 /* ItemTimer.swift in Sources */,
 				A59D3D51287AEA7100B1C6B8 /* EasyToDoTimerApp.swift in Sources */,
 				A59D3D61287B708000B1C6B8 /* CircleButton.swift in Sources */,
 				A5703313287C3FAC00267155 /* RightButtonStack.swift in Sources */,

@@ -11,6 +11,7 @@ import Charts
 struct ContentView: View {
     
     @EnvironmentObject private var model: ModelTimer
+    //    var itemTimer: ItemTimer
     
     private let totalHours = 10
     
@@ -98,7 +99,9 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    
     static var previews: some View {
+        //        ContentView(itemTimer: ModelTimer().itemsTimers[0])
         ContentView()
             .environmentObject(ModelTimer())
     }
