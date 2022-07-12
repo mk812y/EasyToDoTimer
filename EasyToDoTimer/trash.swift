@@ -7,6 +7,73 @@
 
 import Foundation
 
+
+//,
+//{
+//  "id": 100002,
+//  "name": "Весёлая ручка",
+//  "days": [
+//    {
+//      "weekday": "monday",
+//      "goal": 5,
+//      "fact": 13
+//    },
+//    {
+//      "weekday": "wednesday",
+//      "goal": 2,
+//      "fact": 4
+//    },
+//    {
+//      "weekday": "thursday",
+//      "goal": 0,
+//      "fact": 13
+//    },
+//    {
+//      "weekday": "saturday",
+//      "goal": 12,
+//      "fact": 7
+//    }
+//  ],
+//  "isComplete": true,
+//  "isRunning": false,
+//  "description": "Многие думают"
+//},
+//{
+//  "id": 100003,
+//  "name": "Трамвайная ручка",
+//  "days": [
+//    {
+//      "weekday": "tuesday",
+//      "goal": 13,
+//      "fact": 1
+//    },
+//    {
+//      "weekday": "wednesday",
+//      "goal": 5,
+//      "fact": 5
+//    },
+//    {
+//      "weekday": "thursday",
+//      "goal": 0,
+//      "fact": 4
+//    },
+//    {
+//      "weekday": "saturday",
+//      "goal": 6,
+//      "fact": 7
+//    },
+//    {
+//      "weekday": "sunday",
+//      "goal": 0,
+//      "fact": 0
+//    }
+//  ],
+//  "isComplete": false,
+//  "isRunning": true,
+//  "description": "Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад."
+//}
+
+
 //                    .fill(Color(UIColor.secondarySystemBackground))?
 //Image(systemName: "arrow.up.and.down")
 //    .foregroundColor(.white)

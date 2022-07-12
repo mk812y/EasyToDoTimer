@@ -12,17 +12,22 @@ struct TimerRow: View {
     @EnvironmentObject private var model: ModelTimer
     var itemTimer: ItemTimer
     
+//    itemTimer.days
+    
     private let totalHours = 10
     
-    let data: [DataItem] = [
-        .init(day: "mo", value: 12),
-        .init(day: "tu", value: 4),
-        .init(day: "we", value: 10),
-        .init(day: "th", value: 5),
-        .init(day: "fr", value: 3),
-        .init(day: "sa", value: 15),
-        .init(day: "su", value: 9)
-    ]
+//    var lol: [ItemTimer.Days]
+//    var dfd = itemTimer.days
+    
+//    let data: [DataItem] = [
+//        .init(day: "mo", value: 12),
+//        .init(day: "tu", value: 4),
+//        .init(day: "we", value: 10),
+//        .init(day: "th", value: 5),
+//        .init(day: "fr", value: 3),
+//        .init(day: "sa", value: 15),
+//        .init(day: "su", value: 9)
+//    ]
     
     var body: some View {
         ZStack {
@@ -33,20 +38,27 @@ struct TimerRow: View {
                     .fill(Color.white)
                 HStack {
                     VStack(alignment: .leading) {
-                        Text("Трамвайная ручка")
+                        Text("\(itemTimer.name)")
                             .font(.headline)
                             .padding(EdgeInsets(top: 5, leading: 8, bottom: 0, trailing: 0))
                         Chart {
-                            ForEach(data) { item in
+                        ForEach(itemTimer.days, id: \.self) { item in
                                 BarMark(
-                                    x: .value("Day", item.day),
-                                    y: .value("Hour", item.value)
+                                    x: .value("Day", item.goal),
+                                    y: .value("Hour", item.fact)
                                 )
                                 .foregroundStyle(
-                                    Int(item.value) >= totalHours ? .green : .orange
+                                    Int(item.goal) <= Int(item.fact) ? .green : .orange
                                 )
                             }
                         }
+//                        ForEach(itemTimer.days, id: \.self) { item in
+//                            HStack {
+//                                Text("\(item.goal) f,")
+//                                Text("\(item.fact) g")
+//                                Text("\(item.weekday)")
+//                            }
+//                        }
                     }
                     .foregroundColor(.black)
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: -10))
@@ -56,7 +68,7 @@ struct TimerRow: View {
                 }
             }
         }
-        .frame(width: nil, height: 150)
+        .frame(width: nil, height: 300)
     }
 }
 
