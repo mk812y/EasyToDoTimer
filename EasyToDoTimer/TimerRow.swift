@@ -1,5 +1,5 @@
 //
-//  TimerRowOld.swift
+//  TimerRow.swift
 //  EasyToDoTimer
 //
 //  Created by Михаил Куприянов on 12.07.2022.
@@ -8,73 +8,52 @@
 import SwiftUI
 import Charts
 
-struct TimerRowOld: View {
+struct TimerRow: View {
     @EnvironmentObject private var model: ModelTimer
     var itemTimer: ItemTimer
-    
-//    itemTimer.days
-    
-    private let totalHours = 10
-    
-//    var lol: [ItemTimer.Days]
-//    var dfd = itemTimer.days
-    
-//    let data: [DataItem] = [
-//        .init(day: "mo", value: 12),
-//        .init(day: "tu", value: 4),
-//        .init(day: "we", value: 10),
-//        .init(day: "th", value: 5),
-//        .init(day: "fr", value: 3),
-//        .init(day: "sa", value: 15),
-//        .init(day: "su", value: 9)
-//    ]
     
     var body: some View {
         ZStack {
             ZStack {
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color(UIColor.systemBlue), lineWidth: 2)
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.white)
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text("\(itemTimer.name)")
-                            .font(.headline)
-                            .padding(EdgeInsets(top: 5, leading: 8, bottom: 0, trailing: 0))
-//                        Chart {
-//                        ForEach(itemTimer.days, id: \.self) { item in
-//                                BarMark(
-//                                    x: .value("Day", item.goal),
-//                                    y: .value("Hour", item.fact)
-//                                )
-//                                .foregroundStyle(
-//                                    Int(item.goal) <= Int(item.fact) ? .green : .orange
-//                                )
-//                            }
-//                        }
-//                        ForEach(itemTimer.days, id: \.self) { item in
-//                            HStack {
-//                                Text("\(item.goal) f,")
-//                                Text("\(item.fact) g")
-//                                Text("\(item.weekday)")
-//                            }
-//                        }
+                TimerRectangle()
+                VStack {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            textTimerName
+                            ChartsView(itemTimer: itemTimer)
+                        }
+                        .padding([.leading, .bottom], 10)
+                        Spacer()
+                        HStack {
+                            CircleButton(style: model.isRunning ? .pause : .start)
+                                .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: -30))
+                            VStack {
+                                Image(systemName: "gearshape.circle.fill")
+                                Spacer()
+                                Image(systemName: "chevron.down.circle.fill")
+                            }
+                            .font(.largeTitle)
+                        }
+                        
                     }
-                    .foregroundColor(.black)
-                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: -10))
-                    Spacer()
-                    CircleButton(style: model.isRunning ? .pause : .start)
-                        .padding(5)
+                    
                 }
             }
         }
-        .frame(width: nil, height: 300)
+        .frame(width: nil, height: 150)
+        .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+    }
+    
+    var textTimerName: some View {
+        Text("\(itemTimer.name)")
+            .font(.headline)
+            .padding(EdgeInsets(top: 5, leading: 8, bottom: 0, trailing: 0))
     }
 }
 
 struct TimerRow_Previews: PreviewProvider {
     static var previews: some View {
-        TimerRowOld(itemTimer: ModelTimer().itemsTimers[0])
+        TimerRow(itemTimer: ModelTimer().itemsTimers[0])
             .environmentObject(ModelTimer())
     }
 }

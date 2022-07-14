@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5454DB6288055AE0064BDF6 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5454DB5288055AE0064BDF6 /* ChartsView.swift */; };
+		A5454DB8288056F80064BDF6 /* TimerRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5454DB7288056F80064BDF6 /* TimerRectangle.swift */; };
+		A5454DBD2880907B0064BDF6 /* TimerDate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5454DBB2880907B0064BDF6 /* TimerDate.xcdatamodeld */; };
 		A56A46C9287D7ABD00421DA4 /* ItemTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A46C8287D7ABD00421DA4 /* ItemTimer.swift */; };
-		A56A46CB287D9A4E00421DA4 /* TimerRowOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A46CA287D9A4E00421DA4 /* TimerRowOld.swift */; };
+		A56A46CB287D9A4E00421DA4 /* TimerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A46CA287D9A4E00421DA4 /* TimerRow.swift */; };
 		A5703313287C3FAC00267155 /* RightButtonStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5703312287C3FAC00267155 /* RightButtonStack.swift */; };
 		A5703315287C936E00267155 /* ModelTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5703314287C936E00267155 /* ModelTimer.swift */; };
 		A59B0166287F5D0A00D93D03 /* TimerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59B0165287F5D0A00D93D03 /* TimerDetail.swift */; };
@@ -23,8 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A5454DB5288055AE0064BDF6 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
+		A5454DB7288056F80064BDF6 /* TimerRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRectangle.swift; sourceTree = "<group>"; };
+		A5454DBC2880907B0064BDF6 /* TimerDate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimerDate.xcdatamodel; sourceTree = "<group>"; };
 		A56A46C8287D7ABD00421DA4 /* ItemTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTimer.swift; sourceTree = "<group>"; };
-		A56A46CA287D9A4E00421DA4 /* TimerRowOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRowOld.swift; sourceTree = "<group>"; };
+		A56A46CA287D9A4E00421DA4 /* TimerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRow.swift; sourceTree = "<group>"; };
 		A5703312287C3FAC00267155 /* RightButtonStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightButtonStack.swift; sourceTree = "<group>"; };
 		A5703314287C936E00267155 /* ModelTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTimer.swift; sourceTree = "<group>"; };
 		A59B0165287F5D0A00D93D03 /* TimerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDetail.swift; sourceTree = "<group>"; };
@@ -71,7 +77,10 @@
 			children = (
 				A59D3D50287AEA7100B1C6B8 /* EasyToDoTimerApp.swift */,
 				A59D3D52287AEA7100B1C6B8 /* ContentView.swift */,
-				A56A46CA287D9A4E00421DA4 /* TimerRowOld.swift */,
+				A5454DBB2880907B0064BDF6 /* TimerDate.xcdatamodeld */,
+				A56A46CA287D9A4E00421DA4 /* TimerRow.swift */,
+				A5454DB7288056F80064BDF6 /* TimerRectangle.swift */,
+				A5454DB5288055AE0064BDF6 /* ChartsView.swift */,
 				A59B0165287F5D0A00D93D03 /* TimerDetail.swift */,
 				A59B0167287F5D3D00D93D03 /* TimerList.swift */,
 				A5703312287C3FAC00267155 /* RightButtonStack.swift */,
@@ -175,14 +184,17 @@
 			files = (
 				A59D3D5F287B0F1300B1C6B8 /* trash.swift in Sources */,
 				A5703315287C936E00267155 /* ModelTimer.swift in Sources */,
-				A56A46CB287D9A4E00421DA4 /* TimerRowOld.swift in Sources */,
+				A56A46CB287D9A4E00421DA4 /* TimerRow.swift in Sources */,
 				A59D3D53287AEA7100B1C6B8 /* ContentView.swift in Sources */,
 				A56A46C9287D7ABD00421DA4 /* ItemTimer.swift in Sources */,
 				A59B0166287F5D0A00D93D03 /* TimerDetail.swift in Sources */,
 				A59D3D51287AEA7100B1C6B8 /* EasyToDoTimerApp.swift in Sources */,
+				A5454DBD2880907B0064BDF6 /* TimerDate.xcdatamodeld in Sources */,
 				A59D3D61287B708000B1C6B8 /* CircleButton.swift in Sources */,
+				A5454DB8288056F80064BDF6 /* TimerRectangle.swift in Sources */,
 				A5703313287C3FAC00267155 /* RightButtonStack.swift in Sources */,
 				A59B0168287F5D3D00D93D03 /* TimerList.swift in Sources */,
+				A5454DB6288055AE0064BDF6 /* ChartsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +395,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A5454DBB2880907B0064BDF6 /* TimerDate.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A5454DBC2880907B0064BDF6 /* TimerDate.xcdatamodel */,
+			);
+			currentVersion = A5454DBC2880907B0064BDF6 /* TimerDate.xcdatamodel */;
+			path = TimerDate.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A59D3D45287AEA7100B1C6B8 /* Project object */;
 }

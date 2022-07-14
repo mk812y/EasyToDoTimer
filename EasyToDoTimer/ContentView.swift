@@ -11,7 +11,9 @@ import Charts
 struct ContentView: View {
     
     @EnvironmentObject private var model: ModelTimer
-    //    var itemTimer: ItemTimer
+    var itemTimer: ItemTimer
+    
+    var sss = Date()
     
     private let totalHours = 10
     
@@ -27,40 +29,11 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            ZStack {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color(UIColor.systemBlue), lineWidth: 2)
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(Color.white)
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("Трамвайная ручка")
-                                .font(.headline)
-                                .padding(EdgeInsets(top: 5, leading: 8, bottom: 0, trailing: 0))
-                            Chart {
-                                ForEach(data) { item in
-                                    BarMark(
-                                        x: .value("Day", item.day),
-                                        y: .value("Hour", item.value)
-                                    )
-                                    .foregroundStyle(
-                                        Int(item.value) >= totalHours ? .green : .orange
-                                    )
-                                }
-                            }
-                        }
-                        .foregroundColor(.black)
-                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: -10))
-                        Spacer()
-                        CircleButton(style: model.isRunning ? .pause : .start)
-                            .padding(5)
-                    }
-                }
-            }
-            .frame(width: nil, height: 150)
-            .padding(EdgeInsets(top: 0, leading: 10, bottom: 5, trailing: 10))
-            
+            TimerRow(itemTimer: itemTimer)
+            TimerRow(itemTimer: itemTimer)
+            TimerRow(itemTimer: itemTimer)
+            TimerRow(itemTimer: itemTimer)
+            Text("\(sss)")
             ZStack {
                 ZStack {
                     RoundedRectangle(cornerRadius: 20)
@@ -101,8 +74,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     
     static var previews: some View {
-        //        ContentView(itemTimer: ModelTimer().itemsTimers[0])
-        ContentView()
+        ContentView(itemTimer: ModelTimer().itemsTimers[0])
             .environmentObject(ModelTimer())
     }
 }

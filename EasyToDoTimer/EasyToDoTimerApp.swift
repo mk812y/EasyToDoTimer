@@ -14,7 +14,7 @@ struct EasyToDoTimerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(itemTimer: ModelTimer().itemsTimers[0])
                 .environmentObject(model)
         }
     }
