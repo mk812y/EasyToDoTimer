@@ -1,0 +1,18 @@
+[
+    {
+        "id": 100001,
+        "name": "commit everyday on GitHub",
+        "goalForDays": 43200,
+        "isComplete": false,
+        "isRunning": false,
+        "description": "Wow!"
+    },
+    {
+        "id": 100002,
+        "name": "Весёлая ручка",
+        "goalForDays": 54000,
+        "isComplete": false,
+        "isRunning": false,
+        "description": "Goooooo!"
+    }
+]

@@ -24,7 +24,7 @@ struct ContentView: View {
         .init(day: "th", value: 5),
         .init(day: "fr", value: 3),
         .init(day: "sa", value: 15),
-        .init(day: "su", value: 9)
+        .init(day: "su", value: 91)
     ]
     
     var body: some View {
