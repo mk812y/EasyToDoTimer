@@ -41,17 +41,17 @@ struct TimerRowOld: View {
                         Text("\(itemTimer.name)")
                             .font(.headline)
                             .padding(EdgeInsets(top: 5, leading: 8, bottom: 0, trailing: 0))
-//                        Chart {
-//                        ForEach(itemTimer.days, id: \.self) { item in
-//                                BarMark(
-//                                    x: .value("Day", item.goal),
-//                                    y: .value("Hour", item.fact)
-//                                )
-//                                .foregroundStyle(
-//                                    Int(item.goal) <= Int(item.fact) ? .green : .orange
-//                                )
-//                            }
-//                        }
+                        Chart {
+                        ForEach(itemTimer.days, id: \.self) { item in
+                                BarMark(
+                                    x: .value("Day", item.goal),
+                                    y: .value("Hour", item.fact)
+                                )
+                                .foregroundStyle(
+                                    Int(item.goal) <= Int(item.fact) ? .green : .orange
+                                )
+                            }
+                        }
 //                        ForEach(itemTimer.days, id: \.self) { item in
 //                            HStack {
 //                                Text("\(item.goal) f,")
@@ -68,11 +68,11 @@ struct TimerRowOld: View {
                 }
             }
         }
-        .frame(width: nil, height: 300)
+        .frame(width: nil, height: 150)
     }
 }
 
-struct TimerRow_Previews: PreviewProvider {
+struct TimerRowOld_Previews: PreviewProvider {
     static var previews: some View {
         TimerRowOld(itemTimer: ModelTimer().itemsTimers[0])
             .environmentObject(ModelTimer())
