@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A51650AC2881E63100DF02D0 /* TimerAndLog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A51650AA2881E63100DF02D0 /* TimerAndLog.xcdatamodeld */; };
 		A5454DB6288055AE0064BDF6 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5454DB5288055AE0064BDF6 /* ChartsView.swift */; };
 		A5454DB8288056F80064BDF6 /* TimerRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5454DB7288056F80064BDF6 /* TimerRectangle.swift */; };
 		A5454DBF2880A3D40064BDF6 /* testItemTimer.json in Resources */ = {isa = PBXBuildFile; fileRef = A5454DBE2880A3D40064BDF6 /* testItemTimer.json */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A51650AB2881E63100DF02D0 /* TimersAndLogs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimersAndLogs.xcdatamodel; sourceTree = "<group>"; };
 		A5454DB5288055AE0064BDF6 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		A5454DB7288056F80064BDF6 /* TimerRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRectangle.swift; sourceTree = "<group>"; };
 		A5454DBE2880A3D40064BDF6 /* testItemTimer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testItemTimer.json; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				A5E8AD91287CB3BA000034D8 /* testData.json */,
 				A5454DBE2880A3D40064BDF6 /* testItemTimer.json */,
 				A5454DC02880A4030064BDF6 /* testTimersJournal.json */,
+				A51650AA2881E63100DF02D0 /* TimerAndLog.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				A5703313287C3FAC00267155 /* RightButtonStack.swift in Sources */,
 				A5454DC12880A4030064BDF6 /* testTimersJournal.json in Sources */,
 				A59B0168287F5D3D00D93D03 /* TimerList.swift in Sources */,
+				A51650AC2881E63100DF02D0 /* TimerAndLog.xcdatamodeld in Sources */,
 				A5454DB6288055AE0064BDF6 /* ChartsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +403,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A51650AA2881E63100DF02D0 /* TimerAndLog.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A51650AB2881E63100DF02D0 /* TimersAndLogs.xcdatamodel */,
+			);
+			currentVersion = A51650AB2881E63100DF02D0 /* TimersAndLogs.xcdatamodel */;
+			path = TimerAndLog.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A59D3D45287AEA7100B1C6B8 /* Project object */;
 }
