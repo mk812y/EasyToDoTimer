@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21223.11" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="LogTimer" representedClassName="LogTimer" syncable="YES" codeGenerationType="class"/>
-    <entity name="Timer" representedClassName="Timer" syncable="YES" codeGenerationType="class">
-        <attribute name="descriptions" optional="YES" attributeType="String"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21256.2" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="TimerDatesLog" representedClassName="TimerDatesLog" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="seconds" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="timer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Timers" inverseName="dates" inverseEntity="Timers"/>
+    </entity>
+    <entity name="Timers" representedClassName="Timers" syncable="YES" codeGenerationType="class">
         <attribute name="goalDay" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isComplete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="isRunning" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="dates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TimerDatesLog" inverseName="timer" inverseEntity="TimerDatesLog"/>
     </entity>
-    <elements>
-        <element name="Timer" positionX="-63" positionY="-18" width="128" height="104"/>
-        <element name="LogTimer" positionX="-54" positionY="27" width="128" height="29"/>
-    </elements>
 </model>
