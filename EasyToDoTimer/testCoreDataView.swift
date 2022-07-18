@@ -8,25 +8,115 @@
 import SwiftUI
 import CoreData
 
+import SwiftUI
+import CoreData
+
 struct testCoreDataView: View {
     
     @State var name: String = ""
-    @State var goalDay: Int = 0
-    @State var isComplete: Bool = false
-    @State var isRunning: Bool = false
     
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: Timer.entity(), sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)])
-    private var timers: FetchedResults<Timer>
-    let fetchRequest: NSFetchRequest<Timer> = Timer.fetchRequest()
+    
+    @FetchRequest(entity: Timers.entity(),
+                  sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)])
+    private var timers: FetchedResults<Timers>
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                TextField("timer name", text: $name)
+        
+                HStack {
+                        Spacer()
+                        Button("Add") {
+                            addTimer()
+                        }
+                        Spacer()
+                        Button("Clear") {
+                            name = ""
+                        }
+                        Spacer()
+                    }
+                
+                List {
+                    ForEach(timers) { timer in
+                        HStack {
+                            Text(timer.name ?? "Not found")
+                            
+                            
+                        }
+                    }
+                    .onDelete(perform: deleteTimers)
+                }
+                .navigationTitle("Timers")
+            }
+            .padding()
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+        }
+    }
+    
+    private func addTimer() {
+        
+        withAnimation {
+            let timer = Timers(context: viewContext)
+            timer.name = name
+            saveContext()
+        }
+    }
+    
+    private func deleteTimers(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { timers[$0] }.forEach(viewContext.delete)
+            saveContext()
+        }
+    }
+    
+    private func saveContext() {
+        do {
+            try viewContext.save()
+        } catch {
+            let error = error as NSError
+            fatalError("An error occured: \(error)")
+        }
     }
 }
 
-//struct testCoreDataView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        testCoreDataView()
-//    }
-//}
+struct ResultsView: View {
+    
+    var name: String
+    var viewContext: NSManagedObjectContext
+    @State var matches: [Timers]?
+    
+    var body: some View {
+        
+        return VStack {
+            List {
+                
+                ForEach(matches ?? []) { match in
+                    HStack {
+                        Text(match.name ?? "Not found")
+                        
+                    }
+                }
+            }
+            .navigationTitle("Results")
+            
+        }
+        .task {
+            let fetchRequest: NSFetchRequest<Timers> = Timers.fetchRequest()
+            
+            fetchRequest.entity = Timers.entity()
+            fetchRequest.predicate = NSPredicate(
+                format: "name CONTAINS %@", name
+            )
+            matches = try? viewContext.fetch(fetchRequest)
+        }
+    }
+}
+
+struct testCoreDataView_Previews: PreviewProvider {
+    static var previews: some View {
+        testCoreDataView()
+    }
+}
