@@ -11,7 +11,7 @@
 		A5454DB6288055AE0064BDF6 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5454DB5288055AE0064BDF6 /* ChartsView.swift */; };
 		A5454DB8288056F80064BDF6 /* TimerRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5454DB7288056F80064BDF6 /* TimerRectangle.swift */; };
 		A5454DBF2880A3D40064BDF6 /* testItemTimer.json in Resources */ = {isa = PBXBuildFile; fileRef = A5454DBE2880A3D40064BDF6 /* testItemTimer.json */; };
-		A5454DC12880A4030064BDF6 /* testTimersJournal.json in Sources */ = {isa = PBXBuildFile; fileRef = A5454DC02880A4030064BDF6 /* testTimersJournal.json */; };
+		A54AE3572885DCAB0053AC30 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54AE3562885DCAB0053AC30 /* Persistence.swift */; };
 		A56A46C9287D7ABD00421DA4 /* ItemTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A46C8287D7ABD00421DA4 /* ItemTimer.swift */; };
 		A56A46CB287D9A4E00421DA4 /* TimerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56A46CA287D9A4E00421DA4 /* TimerRow.swift */; };
 		A5703313287C3FAC00267155 /* RightButtonStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5703312287C3FAC00267155 /* RightButtonStack.swift */; };
@@ -32,7 +32,7 @@
 		A5454DB5288055AE0064BDF6 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		A5454DB7288056F80064BDF6 /* TimerRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRectangle.swift; sourceTree = "<group>"; };
 		A5454DBE2880A3D40064BDF6 /* testItemTimer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testItemTimer.json; sourceTree = "<group>"; };
-		A5454DC02880A4030064BDF6 /* testTimersJournal.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testTimersJournal.json; sourceTree = "<group>"; };
+		A54AE3562885DCAB0053AC30 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A56A46C8287D7ABD00421DA4 /* ItemTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTimer.swift; sourceTree = "<group>"; };
 		A56A46CA287D9A4E00421DA4 /* TimerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRow.swift; sourceTree = "<group>"; };
 		A5703312287C3FAC00267155 /* RightButtonStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightButtonStack.swift; sourceTree = "<group>"; };
@@ -89,6 +89,7 @@
 				A5703312287C3FAC00267155 /* RightButtonStack.swift */,
 				A59D3D60287B708000B1C6B8 /* CircleButton.swift */,
 				A5703314287C936E00267155 /* ModelTimer.swift */,
+				A54AE3562885DCAB0053AC30 /* Persistence.swift */,
 				A56A46C8287D7ABD00421DA4 /* ItemTimer.swift */,
 				A59D3D5E287B0F1300B1C6B8 /* trash.swift */,
 				A5E8AD94287CB3DD000034D8 /* Resources */,
@@ -111,7 +112,6 @@
 			children = (
 				A5E8AD91287CB3BA000034D8 /* testData.json */,
 				A5454DBE2880A3D40064BDF6 /* testItemTimer.json */,
-				A5454DC02880A4030064BDF6 /* testTimersJournal.json */,
 				A51650AA2881E63100DF02D0 /* TimerAndLog.xcdatamodeld */,
 			);
 			path = Resources;
@@ -192,6 +192,7 @@
 				A59D3D5F287B0F1300B1C6B8 /* trash.swift in Sources */,
 				A5703315287C936E00267155 /* ModelTimer.swift in Sources */,
 				A56A46CB287D9A4E00421DA4 /* TimerRow.swift in Sources */,
+				A54AE3572885DCAB0053AC30 /* Persistence.swift in Sources */,
 				A59D3D53287AEA7100B1C6B8 /* ContentView.swift in Sources */,
 				A56A46C9287D7ABD00421DA4 /* ItemTimer.swift in Sources */,
 				A59B0166287F5D0A00D93D03 /* TimerDetail.swift in Sources */,
@@ -199,7 +200,6 @@
 				A59D3D61287B708000B1C6B8 /* CircleButton.swift in Sources */,
 				A5454DB8288056F80064BDF6 /* TimerRectangle.swift in Sources */,
 				A5703313287C3FAC00267155 /* RightButtonStack.swift in Sources */,
-				A5454DC12880A4030064BDF6 /* testTimersJournal.json in Sources */,
 				A59B0168287F5D3D00D93D03 /* TimerList.swift in Sources */,
 				A51650AC2881E63100DF02D0 /* TimerAndLog.xcdatamodeld in Sources */,
 				A5454DB6288055AE0064BDF6 /* ChartsView.swift in Sources */,

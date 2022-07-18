@@ -7,6 +7,14 @@
 
 import SwiftUI
 import Charts
+import CoreData
+
+
+struct GetDatesTimer {
+    var dates: Timers
+    var seconds: Timers
+}
+
 
 struct TimerRow: View {
     @EnvironmentObject private var model: ModelTimer
