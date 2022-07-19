@@ -17,7 +17,7 @@ struct GetDatesTimer {
 
 
 struct TimerRow: View {
-    @EnvironmentObject private var model: ModelTimer
+    @EnvironmentObject private var model: ModelLoadJSONTimer
     var itemTimer: ItemTimer
     
     var body: some View {
@@ -61,7 +61,7 @@ struct TimerRow: View {
 
 struct TimerRow_Previews: PreviewProvider {
     static var previews: some View {
-        TimerRow(itemTimer: ModelTimer().itemsTimers[0])
-            .environmentObject(ModelTimer())
+        TimerRow(itemTimer: ModelLoadJSONTimer().itemsTimers[0])
+            .environmentObject(ModelLoadJSONTimer())
     }
 }

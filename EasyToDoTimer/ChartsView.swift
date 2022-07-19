@@ -27,6 +27,6 @@ struct ChartsView: View {
 
 struct ChartsView_Previews: PreviewProvider {
     static var previews: some View {
-        ChartsView(itemTimer: ModelTimer().itemsTimers[0])
+        ChartsView(itemTimer: ModelLoadJSONTimer().itemsTimers[0])
     }
 }

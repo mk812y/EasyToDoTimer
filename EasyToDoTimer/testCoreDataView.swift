@@ -14,6 +14,11 @@ import CoreData
 struct testCoreDataView: View {
     
     @State var name: String = ""
+    @State var date = Date()
+    
+    let components = Calendar.current.dateComponents([.hour, .minute], from: date)
+    let hour = components.hour ?? 0
+    let minute = components.minute ?? 0
     
     @Environment(\.managedObjectContext) private var viewContext
     
@@ -25,6 +30,11 @@ struct testCoreDataView: View {
         NavigationView {
             VStack {
                 TextField("timer name", text: $name)
+                DatePicker("please goal time day",
+                           selection: $date,
+                           displayedComponents: .hourAndMinute)
+                    .labelsHidden()
+                Text(Date.now.formatted(date: .long, time: .shortened))
         
                 HStack {
                         Spacer()

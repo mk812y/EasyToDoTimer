@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CircleButton: View {
     
-    @EnvironmentObject private var model: ModelTimer
+    @EnvironmentObject private var model: ModelLoadJSONTimer
     
     enum ButtonStyle {
         case start
@@ -88,7 +88,7 @@ struct CircleButton: View {
 struct CircleButton_Previews: PreviewProvider {
     static var previews: some View {
         CircleButton(style: .pause)
-            .environmentObject(ModelTimer())
+            .environmentObject(ModelLoadJSONTimer())
             .previewLayout(.fixed(width: 150, height: 150))
     }
 }

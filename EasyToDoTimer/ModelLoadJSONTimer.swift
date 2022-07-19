@@ -1,5 +1,5 @@
 //
-//  ModelTimer.swift
+//  ModelLoadJSONTimer.swift
 //  EasyToDoTimer
 //
 //  Created by Михаил Куприянов on 11.07.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class ModelTimer: ObservableObject {
+class ModelLoadJSONTimer: ObservableObject {
     
     @Published var itemsTimers: [ItemTimer] = load("testData.json")
     
