@@ -16,9 +16,9 @@ struct testCoreDataView: View {
     @State var name: String = ""
     @State var date = Date()
     
-    let components = Calendar.current.dateComponents([.hour, .minute], from: date)
-    let hour = components.hour ?? 0
-    let minute = components.minute ?? 0
+//    let components = Calendar.current.dateComponents([.hour, .minute], from: date)
+//    let hour = components.hour ?? 0
+//    let minute = components.minute ?? 0
     
     @Environment(\.managedObjectContext) private var viewContext
     
